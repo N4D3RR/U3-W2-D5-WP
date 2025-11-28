@@ -2,10 +2,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import "./App.css"
 import NavBar from "./components/Navbar"
 import "bootstrap/dist/css/bootstrap.min.css"
+import "leaflet/dist/leaflet.css"
 import Footer from "./components/Footer"
 import Home from "./components/Home"
 import CityDetails from "./components/CityDetails"
 import Favorites from "./components/Favorites"
+import Map from "./components/Map"
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
             <Route path="/" element={<Home />}></Route>
             <Route path="/city/:cityName" element={<CityDetails />}></Route>
             <Route path="/favorites" element={<Favorites />}></Route>
+            <Route path="/map" element={<Map />}></Route>
           </Routes>
         </div>
         <Footer />
