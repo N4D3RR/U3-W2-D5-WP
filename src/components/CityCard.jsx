@@ -5,26 +5,30 @@ const CityCard = function ({ data }) {
   return (
     <Card
       as={Link}
-      to={`city/${data.name}`}
-      className="text-decoration-none my-3 shadow-sm"
+      to={`/city/${data.name}`}
+      className="text-decoration-none my-3 shadow-sm border-0 rounded-4 bg-primary bg-gradient text-white"
     >
       <Card.Body className="text-center">
+        <Card.Title className="fs-4 fw-bold mb-3">{data.name}</Card.Title>
+
         <Card.Img
-          variant="top"
-          src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} //weather è un array, un incubo capire il problema
+          src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
           alt="icon"
+          className="mb-3"
           style={{ width: "70px", height: "70px" }}
         />
-        <Card.Title className="fs-3">{data.name}</Card.Title>
-        <Card.Text className="mt-3">
-          <strong>{data.main.temp.toFixed(1)}°C </strong>
+
+        <Card.Text className="display-6 fw-light mb-2">
+          {data.main.temp.toFixed(1)}°
         </Card.Text>
-        <Card.Text className="text-muted small">
-          Min: {data.main.temp_min.toFixed(1)}°C - Max:{" "}
-          {data.main.temp_max.toFixed(1)}°C
+
+        <Card.Text className="small text-muted mb-0">
+          Min {data.main.temp_min.toFixed(1)}° • Max{" "}
+          {data.main.temp_max.toFixed(1)}°
         </Card.Text>
       </Card.Body>
     </Card>
   )
 }
+
 export default CityCard

@@ -2,22 +2,49 @@ import Container from "react-bootstrap/Container"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
 import NavDropdown from "react-bootstrap/NavDropdown"
+import { Link, useLocation } from "react-router-dom"
 
 const NavBar = function () {
+  const location = useLocation()
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">Meteo App</Navbar.Brand>
+        <Link to="/" className="navbar-brand">
+          Meteo App
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Weather Map</Nav.Link>
-            <NavDropdown title="Utility" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Favorites</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Maps</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Webcams</NavDropdown.Item>
-            </NavDropdown>
+            <Link
+              to="/"
+              className={
+                location.pathname === "/"
+                  ? "nav-link fw-bold active"
+                  : "nav-link fw-bold text-secondary "
+              }
+            >
+              Home
+            </Link>
+            <Link
+              to="/map"
+              className={
+                location.pathname === "/map"
+                  ? "nav-link fw-bold active"
+                  : "nav-link fw-bold text-secondary "
+              }
+            >
+              Weather Map
+            </Link>
+            <Link
+              to="/favorites"
+              className={
+                location.pathname === "/favorites"
+                  ? "nav-link fw-bold active"
+                  : "nav-link fw-bold text-secondary "
+              }
+            >
+              Favorites
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
