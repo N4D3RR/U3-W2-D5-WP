@@ -6,7 +6,7 @@ import CityCard from "./CityCard"
 const Home = function () {
   const [city, setCity] = useState("")
   const [cardData, setCardData] = useState([])
-  const [loading, setLoading] = useState(true)
+  // const [loading, setLoading] = useState(true)
   // const [error, setError] = useState(false)
 
   const cities = ["Padova", "Milano", "Cagliari", "New York", "Tokyo", "Parigi"]
@@ -50,6 +50,7 @@ const Home = function () {
 
   return (
     <>
+      <title>Meteo App</title>
       <h1 className="text-center my-3 fw-bold">METEO</h1>
 
       <Container className="">

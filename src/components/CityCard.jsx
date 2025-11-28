@@ -6,7 +6,7 @@ const CityCard = function ({ data }) {
     <Card
       as={Link}
       to={`/city/${data.name}`}
-      className="text-decoration-none my-3 shadow-sm border-0 rounded-4 bg-primary bg-gradient text-white"
+      className="text-decoration-none my-3 shadow border-0 rounded-4 bg-primary bg-gradient text-white"
     >
       <Card.Body className="text-center">
         <Card.Title className="fs-4 fw-bold mb-3">{data.name}</Card.Title>

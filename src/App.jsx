@@ -5,20 +5,23 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Footer from "./components/Footer"
 import Home from "./components/Home"
 import CityDetails from "./components/CityDetails"
+import Favorites from "./components/Favorites"
 
 function App() {
   return (
-    <>
+    <div className="d-flex flex-column min-vh-100">
       <BrowserRouter>
         <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/city/:cityName" element={<CityDetails />}></Route>
-          {/* <Route path="/favorites" element={<Favorites />}></Route>  */}
-        </Routes>
+        <div className="flex-grow-1">
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/city/:cityName" element={<CityDetails />}></Route>
+            <Route path="/favorites" element={<Favorites />}></Route>
+          </Routes>
+        </div>
         <Footer />
       </BrowserRouter>
-    </>
+    </div>
   )
 }
 
