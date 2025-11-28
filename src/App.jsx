@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import "./App.css"
-import NavBar from "./components/NavBar"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "leaflet/dist/leaflet.css"
 import Footer from "./components/Footer"
@@ -8,12 +7,13 @@ import Home from "./components/Home"
 import CityDetails from "./components/CityDetails"
 import Favorites from "./components/Favorites"
 import Map from "./components/Map"
+import WeatherBar from "./components/Navbar"
 
 function App() {
   return (
     <div className="d-flex flex-column min-vh-100">
       <BrowserRouter>
-        <NavBar />
+        <WeatherBar />
         <div className="flex-grow-1">
           <Routes>
             <Route path="/" element={<Home />}></Route>

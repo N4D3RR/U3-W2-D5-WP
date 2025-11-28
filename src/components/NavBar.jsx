@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar"
 import NavDropdown from "react-bootstrap/NavDropdown"
 import { Link, useLocation } from "react-router-dom"
 
-const NavBar = function () {
+const WeatherBar = function () {
   const location = useLocation()
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
@@ -52,4 +52,4 @@ const NavBar = function () {
   )
 }
 
-export default NavBar
+export default WeatherBar
