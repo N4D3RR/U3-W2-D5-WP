@@ -7,7 +7,7 @@ import Home from "./components/Home"
 import CityDetails from "./components/CityDetails"
 import Favorites from "./components/Favorites"
 import Map from "./components/Map"
-import WeatherBar from "./components/Navbar"
+import WeatherBar from "./components/WeatherBar"
 
 function App() {
   return (
