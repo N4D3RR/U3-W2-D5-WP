@@ -20,7 +20,7 @@ const NavBar = function () {
               className={
                 location.pathname === "/"
                   ? "nav-link fw-bold active"
-                  : "nav-link fw-bold text-secondary "
+                  : "nav-link fw-bold "
               }
             >
               Home
@@ -30,7 +30,7 @@ const NavBar = function () {
               className={
                 location.pathname === "/map"
                   ? "nav-link fw-bold active"
-                  : "nav-link fw-bold text-secondary "
+                  : "nav-link fw-bold "
               }
             >
               Weather Map
@@ -40,7 +40,7 @@ const NavBar = function () {
               className={
                 location.pathname === "/favorites"
                   ? "nav-link fw-bold active"
-                  : "nav-link fw-bold text-secondary "
+                  : "nav-link fw-bold "
               }
             >
               Favorites
