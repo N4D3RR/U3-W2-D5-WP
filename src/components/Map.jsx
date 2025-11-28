@@ -85,7 +85,7 @@ const Map = function () {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
 
-          {/* layer precipitazioni */}
+          {/* layer vento */}
           <TileLayer
             url={`https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid=9319b17dda869360a74fae1583b82fe7`}
             opacity={1}
