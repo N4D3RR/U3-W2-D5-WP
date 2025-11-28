@@ -59,11 +59,11 @@ const Favorites = function () {
           {!loading &&
             data.length > 0 &&
             data.map((city, i) => (
-              <Col key={i}>
+              <Col xs={12} sm={6} lg={4} key={i} className="">
                 <Card
                   as={Link}
                   to={`/city/${city.name}`}
-                  className="text-decoration-none my-3 shadow-sm border-0 rounded-4 bg-primary bg-gradient text-white"
+                  className="text-decoration-none my-3 shadow-sm border-0 rounded-4 bg-primary bg-gradient text-white "
                 >
                   <Card.Body className="text-center">
                     <Card.Title className="fs-4 fw-bold mb-3">
